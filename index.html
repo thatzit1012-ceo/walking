@@ -408,7 +408,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--primary);outline-offs
       <div class="flow-card"><div class="flow-n">01</div><div><h3>전국 지자체 스탬프투어 운영</h3><p>지역 관광·축제·행사 참여자가 하나의 플랫폼을 이용합니다.</p></div></div>
       <div class="flow-card"><div class="flow-n">02</div><div><h3>약 30만 사용자에게 걷기 기능 제공</h3><p>별도 설치 없이 스탬프투어 앱 안에서 걸음과 1530 실천을 기록합니다.</p></div></div>
       <div class="flow-card"><div class="flow-n">03</div><div><h3>관할 지역 걷기 데이터 집계</h3><p>해당 지역 참여자의 걸음, 실천율과 목표 달성 현황을 지역 단위로 구성합니다.</p></div></div>
-      <div class="flow-card em"><div class="flow-n">04</div><div><h3>walk.stamptour.app에서 시각화</h3><p>접속 코드를 받은 보건소 담당자가 관할 대시보드와 통계 보고서를 확인합니다.</p></div></div>
+      <div class="flow-card em"><div class="flow-n">04</div><div><h3>walk.stamptour.app에서 접속</h3><p>담당 보건소를 선택하고 기관별 접속 코드를 입력해 관할 대시보드와 통계 보고서를 확인합니다.</p></div></div>
       <p class="platform-note">※ 이름·연락처 등 개인을 식별할 수 있는 정보는 표시하지 않습니다. 관할 구역 내 참여 현황을 합산한 통계 숫자와 그래프만 제공합니다.</p>
     </div>
   </div>
@@ -564,8 +564,8 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--primary);outline-offs
 <!-- ============ STAFF ACCESS ============ -->
 <section class="sec" id="staff-access" aria-labelledby="access-h">
   <div class="wrap"><div class="access-shell reveal">
-    <div class="access-copy"><span class="eyebrow">Health center only</span><h2 class="serif" id="access-h">우리 지역 대시보드,<br>확인된 담당자에게만</h2><p>SWS는 개인정보 조회 페이지가 아니라 보건소별 관할 통계 페이지입니다. 접속 코드는 각 기관에 맞는 지역 대시보드를 연결하기 위해, 재직 확인 후 담당자의 공무원 이메일로 보내드립니다.</p><div class="issue-flow" aria-label="접속 코드 발급 절차"><div class="issue-step"><b>01 REQUEST</b><span>기관명·담당자 정보로 코드 요청</span></div><div class="issue-step"><b>02 VERIFY</b><span>해당 보건소 재직 여부 확인</span></div><div class="issue-step"><b>03 SEND</b><span>@korea.kr 공무원 이메일로 발송</span></div><div class="issue-step"><b>04 ACCESS</b><span>관할 대시보드 접속</span></div></div><ul class="access-points"><li><i>✓</i><span>개인별 조회 없이 관할 구역 집계 숫자만 제공</span></li><li><i>✓</i><span>보건소별로 구분된 지역 통계 대시보드 연결</span></li></ul><div class="cta-row"><a class="btn btn-secondary" href="mailto:thazit1012@gmail.com?subject=보건소%20SWS%20접속%20코드%20요청&body=보건소명%3A%0A담당자명%3A%0A공무원%20이메일(%40korea.kr)%3A%0A연락처%3A">접속 코드 요청하기</a></div></div>
-    <form class="access-card" id="access-form" action="/api/access" method="post" autocomplete="off"><span class="secure">● 보건소 담당자 전용</span><h3>이미 코드를 받으셨나요?</h3><p>@korea.kr 공무원 이메일로 전달받은 기관별 접속 코드를 입력해 주세요.</p><label class="code-label" for="access-code">접속 코드</label><div class="code-row"><input class="code-input" id="access-code" name="code" type="password" inputmode="numeric" pattern="[0-9]{4,12}" minlength="4" maxlength="12" placeholder="••••" required aria-describedby="code-help code-status"><button class="btn btn-primary" type="submit">우리 지역 대시보드 열기</button></div><p class="code-help" id="code-help">신규 발급은 보건소명, 담당자명, @korea.kr 이메일과 연락처를 보내 주세요. 재직 확인 후 해당 공무원 이메일로 개별 안내합니다.</p><p class="code-status" id="code-status" role="status" aria-live="polite"></p></form>
+    <div class="access-copy"><span class="eyebrow">walk.stamptour.app</span><h2 class="serif" id="access-h">보건소 선택부터<br>관할 대시보드 접속까지</h2><p><strong>walk.stamptour.app</strong>에서 담당 보건소를 검색·선택한 뒤, 공무원 이메일로 전달받은 기관별 접속 코드를 입력합니다.</p><div class="issue-flow" aria-label="접속 코드 발급 및 이용 절차"><div class="issue-step"><b>01 REQUEST</b><span>보건소 담당자가 코드 요청</span></div><div class="issue-step"><b>02 VERIFY</b><span>해당 보건소 재직 여부 확인</span></div><div class="issue-step"><b>03 SEND</b><span>@korea.kr 공무원 이메일로 발송</span></div><div class="issue-step"><b>04 ACCESS</b><span>보건소 선택 후 코드 입력</span></div></div><ul class="access-points"><li><i>✓</i><span>보건소명 검색 또는 지역별 선택</span></li><li><i>✓</i><span>선택한 보건소의 접속 코드 확인 후 관할 통계 제공</span></li></ul><div class="cta-row"><a class="btn btn-secondary" href="#contact">접속 코드 요청하기</a></div></div>
+    <div class="access-card"><span class="secure">● 보건소 담당자 전용</span><h3>관리자 페이지 이용 방법</h3><p>별도의 코드 입력창을 이 홈페이지에 두지 않습니다. 기존 관리자 접속 화면에서 아래 순서로 이용합니다.</p><ol style="margin:22px 0 26px;padding-left:22px;display:grid;gap:12px;color:var(--body-strong)"><li><strong>walk.stamptour.app</strong> 접속</li><li>보건소명 검색 또는 지역 선택</li><li>해당 보건소 선택</li><li>발급받은 접속 코드 입력</li></ol><a class="btn btn-primary" href="https://walk.stamptour.app" target="_blank" rel="noopener">보건소 관리자 페이지로 이동</a></div>
   </div></div>
 </section>
 
@@ -703,8 +703,6 @@ function count(stat){
     if(p<1)requestAnimationFrame(tick);
   })(t0);
 }
-const accessForm=document.getElementById('access-form');const accessStatus=document.getElementById('code-status');
-accessForm.addEventListener('submit',async(e)=>{e.preventDefault();const button=accessForm.querySelector('button');const input=document.getElementById('access-code');const code=input.value.trim();if(!/^\d{4,12}$/.test(code)){accessStatus.textContent='발급받은 숫자 코드를 확인해 주세요.';return;}button.disabled=true;button.textContent='확인 중…';accessStatus.textContent='';try{const response=await fetch('/api/access',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code}),credentials:'same-origin'});const data=await response.json().catch(()=>({}));input.value='';if(response.ok&&data.redirect){location.assign(data.redirect);return;}accessStatus.textContent=data.message||'접속 코드를 확인할 수 없습니다. 담당자에게 문의해 주세요.';}catch(_){accessStatus.textContent='현재 접속 확인이 원활하지 않습니다. 잠시 후 다시 시도해 주세요.';}finally{button.disabled=false;button.textContent='우리 지역 대시보드 열기';}});
 </script>
 </body>
 </html>
