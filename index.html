@@ -325,6 +325,25 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--primary);outline-offs
   .reveal{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
 }
+
+/* ---- 2026-10 새 걷기 기능 ---- */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.feat{background:#fff;border:1px solid var(--hairline);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.feat .shot{background:var(--surface-soft);padding:18px 18px 0;display:flex;gap:10px;justify-content:center;align-items:flex-end;min-height:230px}
+.feat .shot img{border-radius:12px 12px 0 0;box-shadow:0 6px 20px rgba(20,20,19,.08);max-height:300px;width:auto;object-fit:cover;object-position:top}
+.feat .body{padding:22px 22px 24px}
+.feat .tag{display:inline-block;font-size:12px;font-weight:700;color:var(--primary);letter-spacing:.06em;margin-bottom:8px}
+.feat h3{font-size:19px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.feat p{font-size:15px;color:var(--body);line-height:1.65}
+.feat .why{margin-top:12px;font-size:14px;color:var(--muted);border-top:1px dashed var(--hairline);padding-top:10px}
+.feat--text .shot{min-height:230px;align-items:center;padding:24px}
+.bell{background:#fff;border-radius:16px;padding:18px 20px;box-shadow:0 6px 20px rgba(20,20,19,.08);max-width:300px;font-size:14.5px;line-height:1.55;color:var(--body-strong)}
+.bell b{display:block;font-size:12px;color:var(--muted);margin-bottom:6px;font-weight:600}
+.feat-facts{margin-top:40px;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:center;font-size:15px;color:var(--body)}
+.feat-facts b{font-family:var(--num);font-size:24px;color:var(--ink);margin-right:4px}
+.feat-cap{text-align:center;margin-top:12px;font-size:13px;color:var(--muted-soft)}
+@media (max-width:900px){.feat-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.feat-grid{grid-template-columns:1fr}.feat .shot{min-height:0}}
 </style>
 </head>
 <body>
@@ -509,6 +528,61 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--primary);outline-offs
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ NEW WALKING FEATURES (2026-10) ============ -->
+<section class="sec sec--soft" id="features" aria-labelledby="feat-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">New · 2026</span>
+      <h2 class="serif" id="feat-h">1530의 핵심은 ‘꾸준함’,<br>매일 다시 걷게 만드는 장치가 더해졌습니다</h2>
+      <p>한 번 걷고 끝나는 행사가 아니라, 내일도 걷고 싶어지도록 — 스탬프투어 걷기에 새로 들어간 기능입니다.</p>
+    </div>
+    <div class="feat-grid">
+      <article class="feat reveal">
+        <div class="shot"><img src="img/walk-streak.webp" alt="만보기 탭 「목표 달성 N일차」 카드 — 하루 목표 7,000보, 오늘 목표 달성" loading="lazy" width="640" height="586"></div>
+        <div class="body"><span class="tag">연속 기록</span><h3>목표 달성 N일차</h3>
+          <p>하루 목표를 채운 날이 이어지면 ‘N일차’가 쌓입니다. 목표는 5,000·7,000(기본)·10,000·15,000보 중에서 고르고, 7일 연속마다 하루를 지켜 주는 <b>보호권</b>을 받습니다(최대 2개).</p>
+          <p class="why">끊기면 1일차부터 — 오늘 하루를 걷게 만드는 가장 단순한 동기입니다.</p></div>
+      </article>
+      <article class="feat reveal">
+        <div class="shot"><img src="img/walk-rank.webp" alt="걸음수 랭킹 — 지역(시·도) 탭, 하루 평균 걸음과 🔥연속 일수, 친구추가" loading="lazy" width="640" height="613"></div>
+        <div class="body"><span class="tag">관내 경쟁</span><h3>우리 지역 걸음수 랭킹</h3>
+          <p>같은 지역(시·도) 참여자끼리 하루 평균 걸음으로 순위를 겨룹니다. 이름 옆 <b>🔥N일</b>로 서로의 연속 기록이 보이고, 친구로 추가해 친구끼리만 비교할 수도 있습니다.</p>
+          <p class="why">이웃이 걷는 모습이 보이면 나도 걷게 됩니다.</p></div>
+      </article>
+      <article class="feat reveal">
+        <div class="shot"><img src="img/walk-hall.webp" alt="홈 「명예의 전당」 연속 달성 탭 — 🔥401·400·399·362·336일, 하루 7,000보 (이름·사진 가림)" loading="lazy" width="640" height="989"></div>
+        <div class="body"><span class="tag">명예의 전당</span><h3>연속 달성 랭킹</h3>
+          <p>앱 첫 화면 「명예의 전당」에서 연속 달성 일수가 긴 순서로 보여 줍니다. <b>2026년 10월 6일 기준, 하루도 빠짐없이 300일 넘게 이어 가는 참여자가 5명</b>입니다.</p>
+          <p class="why">“나도 저 숫자까지” — 오래 걷는 사람이 다음 사람의 목표가 됩니다.</p></div>
+      </article>
+      <article class="feat reveal">
+        <div class="shot"><img src="img/walk-match.webp" alt="만보 대결 안내 — 하루 10,000보를 먼저 채운 사람이 가져갑니다, 시작 3단계" loading="lazy" width="640" height="1058"></div>
+        <div class="body"><span class="tag">함께 걷기</span><h3>만보 대결 1:1</h3>
+          <p>일주일 동안 한 사람과 1:1로 ‘그날 만보를 채웠는가’를 겨룹니다. 많이 걷는 사람이 아니라 <b>꾸준한 사람이 이기는</b> 규칙이라, 걷기가 익숙하지 않은 주민도 부담 없이 참여합니다.</p>
+          <p class="why">가족·친구·동료와 일주일 약속을 만듭니다.</p></div>
+      </article>
+      <article class="feat feat--text reveal">
+        <div class="shot"><div class="bell"><b>앱 알림함 · 저녁 8시 (예시)</b>2,300보만 더 걸으면 목표 달성 15일차!</div></div>
+        <div class="body"><span class="tag">리마인드</span><h3>목표 근접 저녁 알림</h3>
+          <p>목표의 60% 이상 걸었지만 아직 채우지 못한 날, <b>저녁 8시에 앱 알림함으로</b> 남은 걸음 수를 알려 드립니다. 다 채운 날이나 아직 걷기 전인 날에는 보내지 않습니다.</p>
+          <p class="why">조금만 더 걸으면 되는 날, 포기하지 않게.</p></div>
+      </article>
+      <article class="feat feat--text reveal">
+        <div class="shot"><div class="bell"><b>보건소 담당자에게</b>주민이 앱에서 쓰는 기능은 위와 같고, 보건소는 <b>walk.stamptour.app</b>에서 관할 지역의 합산 통계만 봅니다.</div></div>
+        <div class="body"><span class="tag">보건소 운영</span><h3>별도 앱 설치 없이</h3>
+          <p>새 기능은 모두 스탬프투어 앱에 이미 들어 있어, 보건소 캠페인 참여자도 그대로 씁니다. 1530 이벤트(하루 30분·주 5회)와 함께 돌아가며 참여를 이어 줍니다.</p>
+          <p class="why">개인을 특정하는 정보는 보건소 화면에 표시하지 않습니다.</p></div>
+      </article>
+    </div>
+    <div class="feat-facts reveal">
+      <span><b>7,877</b>명 최근 30일 걸음 기록</span>
+      <span><b>2,179</b>명 하루 평균 기록</span>
+      <span><b>7,450</b>보 1인 하루 평균</span>
+    </div>
+    <p class="feat-cap">※ 스탬프투어 걷기 전체 기준, 2026년 10월 7일 집계(최근 30일). 화면 속 다른 이용자의 이름·사진은 가렸습니다.</p>
   </div>
 </section>
 
